@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <footer className="py-4 flex justify-center items-center">footer section</footer>
+  return <footer className="text-center text-20 py-10">footer section</footer>
 }
