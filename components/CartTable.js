@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react"
 import { useUpdateCartQuantityContext } from "@/context/Store"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
 import Price from "@/components/Price"
 import { getCartSubTotal } from "@/utils/helpers"
@@ -60,7 +58,7 @@ function CartTable({ cart }) {
               </td>
               <td className="font-medium px-4 sm:px-6 py-4">
                 <button aria-label="delete-item" className="" onClick={() => updateItem(item.variantId, 0)}>
-                  <FontAwesomeIcon icon={faTimes} className="w-8 h-8 text-palette-primary border border-palette-primary p-1 hover:bg-palette-lighter" />
+                  remove
                 </button>
               </td>
             </tr>

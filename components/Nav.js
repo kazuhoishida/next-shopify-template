@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useCartContext } from "@/context/Store"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
 function Nav() {
   const cart = useCartContext()[0]
@@ -30,7 +28,7 @@ function Nav() {
         <div>
           <Link href="/cart" passHref>
             <a className=" relative" aria-label="cart">
-              <FontAwesomeIcon className="text-palette-primary w-6 m-auto" icon={faShoppingCart} />
+              cart
               {cartItems === 0 ? null : <div className="absolute top-0 right-0 text-xs bg-yellow-300 text-gray-900 font-semibold rounded-full py-1 px-2 transform translate-x-10 -translate-y-3">{cartItems}</div>}
             </a>
           </Link>

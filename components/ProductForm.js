@@ -1,6 +1,4 @@
 import { useState } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 import { useCartContext, useAddToCartContext } from "@/context/Store"
 
 function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
@@ -86,7 +84,6 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
       </div>
       <button className={atcBtnStyle} aria-label="cart-button" onClick={handleAddToCart}>
         Add To Cart
-        <FontAwesomeIcon icon={faShoppingCart} className="w-5 ml-2" />
       </button>
     </div>
   )
