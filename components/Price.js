@@ -1,9 +1,8 @@
-function Price({currency, num, numSize }) {
+export default function Price({ currency, num, numSize }) {
   return (
     <>
-      {currency}<span className={numSize}>{num}</span>
+      {currency}
+      <span className={numSize}>{num}</span>
     </>
   )
 }
-
-export default Price

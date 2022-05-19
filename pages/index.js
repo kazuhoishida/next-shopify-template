@@ -1,13 +1,15 @@
-import StoreHeading from '@/components/StoreHeading'
-import ProductListings from '@/components/ProductListings'
-import { getAllProductsInCollection } from '@/lib/shopify'
+import ProductCard from "@/components/ProductCard"
+import { getAllProductsInCollection } from "@/lib/shopify"
 
-function IndexPage({ products }) {
-
+export default function IndexPage({ products }) {
   return (
     <div className="mx-auto max-w-6xl">
-      <StoreHeading />
-      <ProductListings products={products} />      
+      <h1 className="text-20 mb-4 text-center">Shopify NextJS template</h1>
+      <div className="grid grid-cols-3 gap-10">
+        {products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -17,9 +19,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      products
+      products,
     },
   }
 }
-
-export default IndexPage
