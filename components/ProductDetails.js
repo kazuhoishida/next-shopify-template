@@ -3,7 +3,7 @@ import BackToProductButton from "@/components/BackToProductButton"
 import ProductInfo from "@/components/ProductInfo"
 import ProductForm from "@/components/ProductForm"
 
-function ProductDetails({ productData }) {
+export default function ProductDetails({ productData }) {
   const [variantPrice, setVariantPrice] = useState(productData.variants.edges[0].node.price)
 
   return (
@@ -14,5 +14,3 @@ function ProductDetails({ productData }) {
     </div>
   )
 }
-
-export default ProductDetails
