@@ -2,7 +2,7 @@ import { getProductSlugs, getProduct } from "@/lib/shopify"
 import ProductImage from "@/components/ProductImage"
 import ProductDetails from "@/components/ProductDetails"
 
-function ProductPage({ productData }) {
+export default function ProductPage({ productData }) {
   return (
     <div className="flex">
       <ProductImage images={productData.images.edges} />
@@ -36,5 +36,3 @@ export async function getStaticProps({ params }) {
     },
   }
 }
-
-export default ProductPage

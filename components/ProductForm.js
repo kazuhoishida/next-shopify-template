@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useCartContext, useAddToCartContext } from "@/context/Store"
 
-function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
+export default function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
   const [quantity, setQuantity] = useState(1)
   const [variantId, setVariantId] = useState(variants[0].node.id)
   const [variant, setVariant] = useState(variants[0])
@@ -73,5 +73,3 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
     </div>
   )
 }
-
-export default ProductForm
