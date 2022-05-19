@@ -11,12 +11,10 @@ module.exports = {
         80: "20rem",
       }),
       colors: {
-        palette: {
-          lighter: "#F5F3FF",
-          light: "#DDD6FE",
-          primary: "#000000",
-          dark: "#4C1D95",
-        },
+        lighter: "#DDDDDD",
+        light: "#AAAAAA",
+        primary: "#000000",
+        dark: "#333333",
       },
       fontSize: {
         9: "0.9rem",

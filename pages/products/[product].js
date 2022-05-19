@@ -1,11 +1,12 @@
-import { getProductSlugs, getProduct } from '@/lib/shopify'
-import ProductSection from '@/components/ProductSection'
+import { getProductSlugs, getProduct } from "@/lib/shopify"
+import ProductImage from "@/components/ProductImage"
+import ProductDetails from "@/components/ProductDetails"
 
-function ProductPage({ productData }) {  
-
+export default function ProductPage({ productData }) {
   return (
-    <div className="min-h-screen py-12 sm:pt-20">
-      <ProductSection productData={productData} />
+    <div className="flex">
+      <ProductImage images={productData.images.edges} />
+      <ProductDetails productData={productData} />
     </div>
   )
 }
@@ -13,10 +14,10 @@ function ProductPage({ productData }) {
 export async function getStaticPaths() {
   const productSlugs = await getProductSlugs()
 
-  const paths = productSlugs.map((slug) => {    
+  const paths = productSlugs.map((slug) => {
     const product = String(slug.node.handle)
     return {
-      params: { product }
+      params: { product },
     }
   })
 
@@ -27,7 +28,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const productData = await getProduct(params.product)  
+  const productData = await getProduct(params.product)
 
   return {
     props: {
@@ -35,5 +36,3 @@ export async function getStaticProps({ params }) {
     },
   }
 }
-
-export default ProductPage
