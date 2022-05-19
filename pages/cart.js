@@ -1,4 +1,4 @@
-import SEO from "@/components/SEO"
+import Seo from "@/components/Seo"
 import CartTable from "@/components/CartTable"
 import CheckOutButton from "@/components/CheckOutButton"
 import BackToProductButton from "@/components/BackToProductButton"
@@ -10,7 +10,7 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto mb-20 min-h-screen">
-      <SEO title={pageTitle} />
+      <Seo title={pageTitle} />
       <CartTable cart={cart} />
       <div className="max-w-sm mx-auto space-y-4 px-2">
         <CheckOutButton webUrl={checkoutUrl} />

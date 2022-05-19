@@ -3,8 +3,8 @@ function CheckOutButton({ webUrl }) {
     <a
       href={webUrl}
       aria-label="checkout-products"
-      className="bg-palette-primary text-white text-lg font-semibold pt-2 pb-1 leading-relaxed flex 
-      justify-center items-center focus:ring-1 focus:ring-palette-light focus:outline-none w-full hover:bg-palette-dark rounded-sm"
+      className="bg-primary text-white text-lg font-semibold pt-2 pb-1 leading-relaxed flex 
+      justify-center items-center focus:ring-1 focus:ring-light focus:outline-none w-full hover:bg-dark rounded-sm"
     >
       Check Out
     </a>
